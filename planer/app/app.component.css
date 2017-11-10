@@ -1,0 +1,16 @@
+.field{
+  width: 500px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.title{
+  text-align: center;
+  font-size: 2em;
+}
+
+.submit{
+  width: 400px;
+}
+.clear{
+  width: 95px;
+}

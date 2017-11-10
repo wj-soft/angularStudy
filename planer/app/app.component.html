@@ -1,0 +1,57 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="field">
+  <label class="label title">StudyPlaner</label>
+  <div class="control">
+    <input class="input" type="text" [value]="name" #subject placeholder="Subject">
+    <input class="input" type="text" [value]="name" #goal placeholder="Goal">
+    <input class="input" type="date" [value]="name" #dueDate placeholder="DueDate">
+  </div>
+  <div class="control">
+    <button (click)="addItem(subject.value, goal.value, dueDate.value)" class="button is-link submit">Submit</button>
+    <button (click)="clearItem()" class="button is-warning clear">clear</button>
+  </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Subject</th>
+      <th>Goal</th>
+      <th>DueDate</th>
+      <th></th>
+      <th>
+        <div class="select">
+          <select>
+            <option class="all">All</option>
+            <option class="fnish">Fnish</option>
+            <option (select)='test()' class="remain">remain</option>
+          </select>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sList of sLists; let i=index">
+      <th class="id">{{i+1}}</th>
+      <td class="subject">{{sList.subject}}</td>
+      <td clase="goal">{{sList.goal}}</td>
+      <td class="dueDate">{{sList.dueDate}}</td>
+      <td><a (click)="removeItem(sList.id)" class="delete"></a></td>
+      <td><input class= "checkbox" type="checkbox" [checked]="sList.completed" (change)="checkToggle(sList.id)"></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Finish <span>{{remainItem()}}</span></td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+
+
+
