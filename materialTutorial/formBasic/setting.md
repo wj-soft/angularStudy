@@ -22,8 +22,12 @@ $ npm install --save hammerjs
 import 'hammerjs';
 ```
 
-5. index.html에 icon/font사용을 위한 링크 추가
+5. index.html에 icon/font사용을 위해 스타일 링크를 추가
 ```
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 ```
 
+# 사용방법
+* API문서를 참고하여 원하는 모듈을 import 함.
+* component의 템플릿 영역에서 디렉티브로 사용함(예제코드 참조)
+* 일반적으로 html에서 쓰이는 폼요소에 'met-' 접두사가 붙는 형태임 (mat-checkbox, mat-button emd)
