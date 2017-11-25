@@ -1,0 +1,37 @@
+
+mat-card{
+  margin: 15px;
+}
+img{
+  height: 300px;
+}
+.footer{
+  background: black;
+}
+.card-content{
+  background: #F4F1F1;
+}
+
+.logo {
+  background: pink;
+}
+.header{
+  background: black;
+  color: white;
+  font-size: 20px;
+  text-align: right;
+}
+.example-card {
+  width: 300px;
+}
+
+.example-header-image {
+  background-image: url('http://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.menu-button{
+  position: relative;
+  bottom: 300px;
+  width: 200px;
+  height: 50px;
+}
